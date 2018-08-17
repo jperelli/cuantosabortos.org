@@ -40,7 +40,7 @@ export default {
   },
   data() {
     return {
-      diffsec: Math.trunc((new Date() - new Date('2018-08-09 02:44')) / 1000),
+      diffsec: Math.trunc((new Date() - new Date('2018/08/09 02:44')) / 1000),
     }
   },
   computed: {
@@ -80,7 +80,7 @@ export default {
   mounted() {
     const step = () => {
       // do something for every frame
-      this.diffsec = ( new Date() - new Date('2018-08-09 02:44') ) / 1000
+      this.diffsec = ( new Date() - new Date('2018/08/09 02:44') ) / 1000
       window.setTimeout(step, 150);
     }
     step()
@@ -126,6 +126,15 @@ body {
     display: grid;
     align-items: center;
     justify-items: center;
+  }
+}
+@media (max-width: 500px) {
+  body {
+    div {
+      .number {
+        font-size: 6vh;
+      }
+    }
   }
 }
 </style>
