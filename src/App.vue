@@ -19,8 +19,8 @@
       <div class="caption">Costo en emergencias</div>
     </div>
     <div>
-      <div class="number">{{Math.trunc(muertes)}}</div>
-      <div class="caption">Muertes</div>
+      <div class="number"><a href="/muertes">{{Math.trunc(muertes)}}</a></div>
+      <div class="caption"><a href="/muertes">Muertes</a></div>
     </div>
     <div>
     </div>
@@ -109,9 +109,17 @@ body {
     text-align: center;
     .number {
       font-size: 10vh;
+      a {
+        color: #EEE;
+        text-decoration: none;
+      }
     }
     .caption {
       opacity: 0.7;
+      a {
+        color: #EEE;
+        text-decoration: none;
+      }
     }
     .caption2 {
       opacity: 0.4;
