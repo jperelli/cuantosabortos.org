@@ -24,9 +24,15 @@
     </div>
     <div>
     </div>
-    <div class="caption2">
-      Valores estimados. Fuentes: <a href="http://www.parlamentario.com/db/000/000660_el_costo_del_aborto_inseguro.pdf">1</a>, <a href="http://chequeado.com/hilando-fino/despenalizacion-del-aborto-que-datos-existen-en-la-argentina/">2</a>. <a href="https://github.com/jperelli/cuantosabortos.org">source code</a>
-    </div>
+    <footer>
+      Valores estimados.<br/>
+      Fuentes: 
+      <ul>
+        <li><a href="http://www.parlamentario.com/db/000/000660_el_costo_del_aborto_inseguro.pdf">Gonzalez, Nancy. El Costo del Aborto Inseguro.</a></li>
+        <li><a href="http://chequeado.com/hilando-fino/despenalizacion-del-aborto-que-datos-existen-en-la-argentina/">Chequeado.com. Despenalización del aborto: ¿qué datos existen en la Argentina?</a></li>
+      </ul>
+      <a href="https://github.com/jperelli/cuantosabortos.org">Código Fuente</a>
+    </footer>
   </div>
 </template>
 
@@ -89,10 +95,6 @@ export default {
 </script>
 
 <style lang="scss">
-@font-face {
-  font-family: 'Bitter';
-  src: url('../public/icomoon.ttf') format('truetype');
-}
 @keyframes vary
 {
   0%   {background:#1A9837;}
@@ -105,7 +107,7 @@ body {
   background: #1A9837;
   div {
     color: #EEE;
-    font-family: 'Bitter', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Courier, monospace, Arial, sans-serif;
     text-align: center;
     .number {
       font-size: 10vh;
@@ -113,8 +115,15 @@ body {
     .caption {
       opacity: 0.7;
     }
-    .caption2 {
-      opacity: 0.4;
+    footer {
+      text-align: left;
+      font-size: 0.8rem;
+      ul{
+        margin: 0;
+        li{
+          list-style-type: lower-roman;
+        }
+      }
       a {
         color: #EEE;
         text-decoration: none;
